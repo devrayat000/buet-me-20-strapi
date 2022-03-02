@@ -27,6 +27,9 @@
     "APP_KEYS": {
       "description": "Keys for the app",
       "generator": "secret"
+    },
+    "DATABASE_URL": {
+      "description": "Url for postgres database"
     }
   },
   "formation": {
