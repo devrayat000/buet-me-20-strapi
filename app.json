@@ -1,0 +1,44 @@
+{
+  "name": "BUET Mechanical '20 Backend",
+  "description": "A simple example project showing how you might deploy Keystone 6 to Heroku",
+  "repository": "https://github.com/devrayat000/buet-me-20-strapi",
+  "website": "https://strapi.io/",
+  "logo": "https://raw.githubusercontent.com/keystonejs/keystone-6-heroku-example/main/assets/keystone-logo.png",
+  "keywords": [
+    "buet",
+    "me",
+    "mecha",
+    "mechanical",
+    "strapi",
+    "node",
+    "graphql",
+    "cms"
+  ],
+  "success_url": "/admin",
+  "env": {
+    "JWT_SECRET": {
+      "description": "A secret key for verifying the integrity of signed jwts.",
+      "generator": "secret"
+    },
+    "API_TOKEN_SALT": {
+      "description": "A token salt for api key.",
+      "generator": "secret"
+    },
+    "APP_KEYS": {
+      "description": "Keys for the app",
+      "generator": "secret"
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql:hobby-dev",
+      "options": { "version": "13" }
+    }
+  ]
+}
