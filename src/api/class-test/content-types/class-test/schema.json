@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "class_tests",
+  "info": {
+    "singularName": "class-test",
+    "pluralName": "class-tests",
+    "displayName": "Class Test"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "subject": {
+      "type": "string",
+      "required": true,
+      "regex": "^\\w+\\s\\-\\s\\d{3}$",
+      "maxLength": 12,
+      "minLength": 4
+    },
+    "about": {
+      "type": "text",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "mcq",
+        "written"
+      ],
+      "enumName": "CtType",
+      "default": "mcq",
+      "required": true
+    },
+    "occurring": {
+      "type": "datetime",
+      "required": true
+    }
+  }
+}

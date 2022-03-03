@@ -19,14 +19,13 @@ module.exports = ({ env }) => {
         database: env("DATABASE_NAME", database),
         user: env("DATABASE_USERNAME", username),
         password: env("DATABASE_PASSWORD", password),
-        ssl: {
-          rejectUnauthorized: env.bool('DATABASE_SSL_SELF', false), // For self-signed certificates
-        },
+        ssl:
+          env("NODE_ENV") === "production"
+            ? {
+                rejectUnauthorized: env.bool("DATABASE_SSL_SELF", false), // For self-signed certificates
+              }
+            : false,
       },
     },
   };
 };
-/**
- * postgres://pviufhqkkwenhw:ac95399e65a7e88ed724d6d37b18931ce757fb5a0b0688f5210b4ce92321b250
- * @ec2-54-83-21-198.compute-1.amazonaws.com:5432/ddpgo0l3u7u1i2
- */

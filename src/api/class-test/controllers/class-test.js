@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- *  todo controller
+ *  class-test controller
  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::todo.todo');
+module.exports = createCoreController('api::class-test.class-test');
