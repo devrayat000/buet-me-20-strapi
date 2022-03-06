@@ -26,6 +26,7 @@ module.exports = ({ env }) => {
               }
             : false,
       },
+      debug: env("NODE_ENV") !== "production",
     },
   };
 };
